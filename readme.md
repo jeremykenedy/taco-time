@@ -5,6 +5,8 @@ Simple Laravel app to calculate taco checkout time.
 - [About](#about)
 - [Features](#features)
 - [Installation Instructions](#installation-instructions)
+    - [Manual Install](#manual-install)
+    - [Automatic Install](#automatic-install)
     - [Build the Front End Assets with Mix](#build-front-end-assets-with-mix)
 - [Routes](#routes)
 - [Screenshots](#screenshots)
@@ -22,12 +24,18 @@ It's Taco Tuesday, and there is a line of people who need tacos. Your task is wr
 |Full Unit Test Coverage with [PHPUnit](https://laravel.com/docs/5.7/testing)|
 
 ### Installation Instructions
+##### Manual Install:
 1. Run `git clone git@bitbucket.org:jeremykenedy/taco-time.git taco-time`
 2. From the projects root run `cp .env.example .env`
-3. Configure your `.env` file
-4. Run `composer update` from the projects root folder
-5. From the projects root folder run `php artisan key:generate`
-6. Compile the front end assets with [yarn](#using-yarn) or [npm](#using-npm).
+3. Run `composer update` from the projects root folder
+4. From the projects root folder run `php artisan key:generate`
+5. Compile the front end assets with [yarn](#using-yarn) or [npm](#using-npm).
+6. From the projects root folder run `php artisan serve`
+
+##### Automatic Install:
+1. Run `git clone git@bitbucket.org:jeremykenedy/taco-time.git taco-time`
+2. From the projects root run `. taco.sh`
+3. Open your browser to `http://127.0.0.1:3000/`
 
 #### Build the Front End Assets with Mix
 ##### Using Yarn:
