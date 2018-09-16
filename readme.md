@@ -68,7 +68,6 @@ Taco Time
 ├── resources
 │   ├── js
 │   │   ├── app.js
-│   │   ├── bootstrap.js
 │   │   └── components
 │   │       └── TacoTime.vue
 │   └── views
