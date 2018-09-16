@@ -82,7 +82,12 @@ class LineTimeTest extends TestCase
         $this->assertEquals(12, $lineTime1);
 
         $lineTime1 = $orderController->lineTime([10,2,3,3], 2);
-        $this->assertEquals(10, $lineTime1);
-    }
+        $this->assertEquals(13, $lineTime1);
 
+        $lineTime1 = $orderController->lineTime([1,1,1], 3);
+        $this->assertEquals(1, $lineTime1);
+
+        $lineTime1 = $orderController->lineTime([5,1,1], 4);
+        $this->assertEquals(5, $lineTime1);
+    }
 }

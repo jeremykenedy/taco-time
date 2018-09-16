@@ -50,19 +50,23 @@ class OrderController extends Controller
                 // check for current registers time and if then continue to add to the next
                 // register until the time has added up to what you are adding the next register
                 if ($registersTimes[$currentRegister] == 0) {
-                    $registersTimes[$currentRegister] =  $registersTimes[$currentRegister] + $time;
-                } elseif($currentRegister == ($registers - 1)) {
-                    $registersTimes[$currentRegister - 1] =  $registersTimes[$currentRegister - 1] + $time;
-                } elseif($registersTimes[$currentRegister] >= $registersTimes[$currentRegister + 1]){
-                    $registersTimes[$currentRegister + 1] =  $registersTimes[$currentRegister + 1] + $time;
-                } elseif($registersTimes[$currentRegister] < $registersTimes[$currentRegister + 1]){
-                    $registersTimes[$currentRegister] =  $registersTimes[$currentRegister] + $time;
-                } elseif($currentRegister == ($registers - 1)) {
-                    $currentRegister = 0;
-                    $registersTimes[$currentRegister] =  $registersTimes[$currentRegister] + $time;
-                } else {
+                    $registersTimes[$currentRegister] = $registersTimes[$currentRegister] + $time;
                     $currentRegister = $currentRegister + 1;
-                    $registersTimes[$currentRegister] =  $registersTimes[$currentRegister] + $time;
+                } elseif($currentRegister == ($registers - 1)) {
+                    $registersTimes[$currentRegister - 1] = $registersTimes[$currentRegister - 1] + $time;
+                    $currentRegister = $currentRegister + 1;
+                } elseif($registersTimes[$currentRegister] >= $registersTimes[$currentRegister + 1]){
+                    $registersTimes[$currentRegister + 1] = $registersTimes[$currentRegister + 1] + $time;
+                    $currentRegister = $currentRegister + 1;
+                } elseif($registersTimes[$currentRegister] < $registersTimes[$currentRegister + 1]){
+                    $registersTimes[$currentRegister] = $registersTimes[$currentRegister] + $time;
+                    $currentRegister = $currentRegister + 1;
+                } elseif($currentRegister == ($registers - 1)) {
+                    $registersTimes[$currentRegister] = $registersTimes[$currentRegister] + $time;
+                    $currentRegister = 0;
+                } else {
+                    $registersTimes[$currentRegister] = $registersTimes[$currentRegister] + $time;
+                    $currentRegister = $currentRegister + 1;
                 }
             }
 
