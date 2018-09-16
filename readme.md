@@ -41,6 +41,7 @@ It's Taco Tuesday, and there is a line of people who need tacos. Your task is wr
   * You can watch assets with `npm run watch`
 
 ### Routes
+
 ```
 +----------+--------------+----------+---------------------------------------------------+------------+
 | Method   | URI          | Name     | Action                                            | Middleware |
@@ -51,8 +52,34 @@ It's Taco Tuesday, and there is a line of people who need tacos. Your task is wr
 ```
 
 ### Screenshots
+![Taco Test Case 1](https://s3-us-west-2.amazonaws.com/taco-time/taco1.jpg)
+![Taco Test Case 2](https://s3-us-west-2.amazonaws.com/taco-time/taco2.jpg)
 
 ### File Tree
 
-* Tree command can be installed using brew: `brew install tree`
-* File tree generated using command `tree -a -I '.git|node_modules|vendor|storage|tests'`
+```
+Taco Time
+├── app
+│   └── Http
+│       └── Controllers
+│           └── OrderController.php
+├── package.json
+├── public
+├── resources
+│   ├── js
+│   │   ├── app.js
+│   │   ├── bootstrap.js
+│   │   └── components
+│   │       └── TacoTime.vue
+│   └── views
+│       ├── home.blade.php
+│       └── layouts
+│           └── app.blade.php
+├── routes
+│   ├── api.php
+│   └── web.php
+├── tests
+│   └── Unit
+│       └── LineTimeTest.php
+└── webpack.mix.js
+```
