@@ -36,8 +36,13 @@ class LineTimeTest extends TestCase
         $orderController = new \App\Http\Controllers\OrderController();
         $this->assertEquals(10, $orderController->lineTime([2,2,3,3], 1));
         $this->assertEquals(12, $orderController->lineTime([5,3,4], 1));
-        $this->assertEquals(13, $orderController->lineTime([10,2,3,3], 2));
+        $this->assertEquals(10, $orderController->lineTime([10,2,3,3], 2));
+        $this->assertEquals(12, $orderController->lineTime([10,2,3,3,4], 2));
         $this->assertEquals(1, $orderController->lineTime([1,1,1], 3));
         $this->assertEquals(5, $orderController->lineTime([5,1,1], 4));
+        $this->assertEquals(5, $orderController->lineTime([5,1,1,1], 4));
+        $this->assertEquals(5, $orderController->lineTime([5,1,1,1,1], 4));
+        $this->assertEquals(5, $orderController->lineTime([5,1,1,1,1], 3));
+        $this->assertEquals(5, $orderController->lineTime([5,1,1,1,1], 2));
     }
 }

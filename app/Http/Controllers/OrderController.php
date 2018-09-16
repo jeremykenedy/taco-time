@@ -57,7 +57,6 @@ class OrderController extends Controller
                     $currentRegister = $currentRegister + 1;
                 } elseif($registersTimes[$currentRegister] >= $registersTimes[$currentRegister + 1]){
                     $registersTimes[$currentRegister + 1] = $registersTimes[$currentRegister + 1] + $time;
-                    $currentRegister = $currentRegister + 1;
                 } elseif($registersTimes[$currentRegister] < $registersTimes[$currentRegister + 1]){
                     $registersTimes[$currentRegister] = $registersTimes[$currentRegister] + $time;
                     $currentRegister = $currentRegister + 1;
