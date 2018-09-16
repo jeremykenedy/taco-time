@@ -15,48 +15,12 @@ class LineTimeTest extends TestCase
      *
      * @return void
      */
-    public function testLineTimeNoInputs()
+    public function testLineTimeBadInputs()
     {
         $orderController = new \App\Http\Controllers\OrderController();
         $this->assertNull($orderController->lineTime());
-    }
-
-    /**
-     * Test the method lineTime() in OrderController.php
-     *
-     * Test with bad $customers input
-     *
-     * @return void
-     */
-    public function testLineTimeBadInputCustomers()
-    {
-        $orderController = new \App\Http\Controllers\OrderController();
         $this->assertNull($orderController->lineTime(3, 1));
-    }
-
-    /**
-     * Test the method lineTime() in OrderController.php
-     *
-     * Test with bad $registers input (as a string)
-     *
-     * @return void
-     */
-    public function testLineTimeBadInputRegistersString()
-    {
-        $orderController = new \App\Http\Controllers\OrderController();
         $this->assertNull($orderController->lineTime([2,2,3,3], 'one'));
-    }
-
-    /**
-     * Test the method lineTime() in OrderController.php
-     *
-     * Test with bad $registers input (as an array)
-     *
-     * @return void
-     */
-    public function testLineTimeBadInputRegistersAsArray()
-    {
-        $orderController = new \App\Http\Controllers\OrderController();
         $this->assertNull($orderController->lineTime([2,2,3,3], [2]));
     }
 
