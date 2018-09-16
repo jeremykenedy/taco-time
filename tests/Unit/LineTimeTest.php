@@ -44,5 +44,9 @@ class LineTimeTest extends TestCase
         $this->assertEquals(5, $orderController->lineTime([5,1,1,1,1], 4));
         $this->assertEquals(5, $orderController->lineTime([5,1,1,1,1], 3));
         $this->assertEquals(5, $orderController->lineTime([5,1,1,1,1], 2));
+        $this->assertEquals(5, $orderController->lineTime([5,1,1,1,1,1], 2));
+        $this->assertEquals(6, $orderController->lineTime([5,1,1,1,1,1,1], 2));
+        $this->assertEquals(5, $orderController->lineTime([5,1,1,1,1,1,1], 3));
+        $this->assertEquals(11, $orderController->lineTime([5,1,1,1,1,1,1], 1));
     }
 }
