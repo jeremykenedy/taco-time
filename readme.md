@@ -41,6 +41,14 @@ It's Taco Tuesday, and there is a line of people who need tacos. Your task is wr
   * You can watch assets with `npm run watch`
 
 ### Routes
+```
++----------+--------------+----------+---------------------------------------------------+------------+
+| Method   | URI          | Name     | Action                                            | Middleware |
++----------+--------------+----------+---------------------------------------------------+------------+
+| GET|HEAD | /            |          | App\Http\Controllers\HomeController@index         | web        |
+| POST     | api/tacotime | tacotime | App\Http\Controllers\OrderController@getlineTimes | api        |
++----------+--------------+----------+---------------------------------------------------+------------+
+```
 
 ### Screenshots
 
