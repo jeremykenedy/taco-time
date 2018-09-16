@@ -2,6 +2,6 @@
 
 @section('content')
 
-
+    <taco-time></taco-time>
 
 @endsection
