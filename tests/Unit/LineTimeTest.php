@@ -18,8 +18,7 @@ class LineTimeTest extends TestCase
     public function testLineTimeNoInputs()
     {
         $orderController = new \App\Http\Controllers\OrderController();
-        $lineTime = $orderController->lineTime();
-        $this->assertNull($lineTime);
+        $this->assertNull($orderController->lineTime());
     }
 
     /**
@@ -32,8 +31,7 @@ class LineTimeTest extends TestCase
     public function testLineTimeBadInputCustomers()
     {
         $orderController = new \App\Http\Controllers\OrderController();
-        $lineTime = $orderController->lineTime(3, 1);
-        $this->assertNull($lineTime);
+        $this->assertNull($orderController->lineTime(3, 1));
     }
 
     /**
@@ -46,8 +44,7 @@ class LineTimeTest extends TestCase
     public function testLineTimeBadInputRegistersString()
     {
         $orderController = new \App\Http\Controllers\OrderController();
-        $lineTime = $orderController->lineTime([2,2,3,3], 'one');
-        $this->assertNull($lineTime);
+        $this->assertNull($orderController->lineTime([2,2,3,3], 'one'));
     }
 
     /**
@@ -60,8 +57,7 @@ class LineTimeTest extends TestCase
     public function testLineTimeBadInputRegistersAsArray()
     {
         $orderController = new \App\Http\Controllers\OrderController();
-        $lineTime = $orderController->lineTime([2,2,3,3], [2]);
-        $this->assertNull($lineTime);
+        $this->assertNull($orderController->lineTime([2,2,3,3], [2]));
     }
 
     /**
