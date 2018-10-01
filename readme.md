@@ -1,5 +1,7 @@
 ## Taco Time
-Simple Laravel app to calculate taco checkout time.
+Simple example Laravel 5.7 app to calculate taco checkout time using a VueJS 2 front end calling Laravel API endpoints.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 #### Table of contents
 - [About](#about)
@@ -11,9 +13,13 @@ Simple Laravel app to calculate taco checkout time.
 - [Routes](#routes)
 - [Screenshots](#screenshots)
 - [File Tree](#file-tree)
+- [License](#license)
 
 ### About
-It's Taco Tuesday, and there is a line of people who need tacos. Your task is write a function, a class, or classes to calculate the total time required for all the customers to place their order!  
+Simple example Laravel app to calculate taco checkout time using a VueJS front end calling Laravel API endpoints.
+It's Taco Tuesday, and there is a line of people who need tacos, and they need to know when.
+Calculate the total time required for all the customers to place their order!  
+
 
 ### Features
 | Taco Time Features  |
@@ -25,7 +31,7 @@ It's Taco Tuesday, and there is a line of people who need tacos. Your task is wr
 
 ### Installation Instructions
 ##### Manual Install:
-1. Run `git clone git@bitbucket.org:jeremykenedy/taco-time.git taco-time`
+1. Run `git clone https://github.com/jeremykenedy/taco-time.git taco-time`
 2. From the projects root run `cp .env.example .env`
 3. Run `composer update` from the projects root folder
 4. From the projects root folder run `php artisan key:generate`
@@ -33,8 +39,8 @@ It's Taco Tuesday, and there is a line of people who need tacos. Your task is wr
 6. From the projects root folder run `php artisan serve`
 
 ##### Automatic Install:
-1. Run `git clone git@bitbucket.org:jeremykenedy/taco-time.git taco-time`
-2. From the projects root run `. taco.sh`
+1. Run `git clone https://github.com/jeremykenedy/taco-time.git taco-time`
+2. From the projects root run `. taco-install.sh`
 3. Open your browser to `http://127.0.0.1:3000/`
 
 #### Build the Front End Assets with Mix
@@ -90,3 +96,6 @@ Taco Time
 │       └── LineTimeTest.php
 └── webpack.mix.js
 ```
+
+### License
+Taco Time is licensed under the [MIT license](https://opensource.org/licenses/MIT). Enjoy!
