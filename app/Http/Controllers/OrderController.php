@@ -18,7 +18,7 @@ class OrderController extends Controller
      *
      * @return int || null      Time required to take order
      */
-    public function lineTime($customers = [], $registers = null)
+    public function lineTime($customers, $registers = null)
     {
         if (!is_array($customers) || empty($customers) || !is_int($registers)) {
             return;
