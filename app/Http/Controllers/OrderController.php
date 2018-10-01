@@ -9,19 +9,19 @@ use Validator;
 class OrderController extends Controller
 {
     /**
-     * Calculate Taco Tuesday's line time
+     * Calculate Taco Tuesday's line time.
      *
-     * @param array $customers  Array of customers in line with serve times ordered via index
-     * @param int   $registers  Number of cash registers
+     * @param array $customers Array of customers in line with serve times ordered via index
+     * @param int   $registers Number of cash registers
      *
      * @example $lineTime = $this->lineTime($customers, $registers);
      *
      * @return int || null      Time required to take order
      */
-    public function lineTime($customers= [], $registers = null)
+    public function lineTime($customers = [], $registers = null)
     {
         if (!is_array($customers) || empty($customers) || !is_int($registers)) {
-            return null;
+            return;
         }
 
         // Processs the line times
@@ -52,15 +52,15 @@ class OrderController extends Controller
                 if ($registersTimes[$currentRegister] == 0) {
                     $registersTimes[$currentRegister] = $registersTimes[$currentRegister] + $time;
                     $currentRegister = $currentRegister + 1;
-                } elseif($currentRegister == ($registers - 1)) {
+                } elseif ($currentRegister == ($registers - 1)) {
                     $registersTimes[$currentRegister - 1] = $registersTimes[$currentRegister - 1] + $time;
                     $currentRegister = $currentRegister + 1;
-                } elseif($registersTimes[$currentRegister] >= $registersTimes[$currentRegister + 1]){
+                } elseif ($registersTimes[$currentRegister] >= $registersTimes[$currentRegister + 1]) {
                     $registersTimes[$currentRegister + 1] = $registersTimes[$currentRegister + 1] + $time;
-                } elseif($registersTimes[$currentRegister] < $registersTimes[$currentRegister + 1]){
+                } elseif ($registersTimes[$currentRegister] < $registersTimes[$currentRegister + 1]) {
                     $registersTimes[$currentRegister] = $registersTimes[$currentRegister] + $time;
                     $currentRegister = $currentRegister + 1;
-                } elseif($currentRegister == ($registers - 1)) {
+                } elseif ($currentRegister == ($registers - 1)) {
                     $registersTimes[$currentRegister] = $registersTimes[$currentRegister] + $time;
                     $currentRegister = 0;
                 } else {
@@ -77,11 +77,11 @@ class OrderController extends Controller
     }
 
     /**
-     * Retreive the line times for taco time
+     * Retreive the line times for taco time.
      *
-     * @param \Illuminate\Http\Request  $request    The request
-     * @param array                     $customers  The customer times in array, first come first serve
-     * @param integer                   $registers  The registers open
+     * @param \Illuminate\Http\Request $request   The request
+     * @param array                    $customers The customer times in array, first come first serve
+     * @param int                      $registers The registers open
      *
      * @return \Illuminate\Http\Response
      */
@@ -106,7 +106,7 @@ class OrderController extends Controller
         return response()->json([
             'code'      => 200,
             'message'   => 'success',
-            'linetime'  => $lineTime
+            'linetime'  => $lineTime,
         ], Response::HTTP_OK);
     }
 }
