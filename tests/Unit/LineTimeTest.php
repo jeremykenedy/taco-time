@@ -16,8 +16,8 @@ class LineTimeTest extends TestCase
     public function testLineTimeBadInputs()
     {
         $orderController = new \App\Http\Controllers\OrderController();
-        $this->assertNull($orderController->lineTime());
         $this->assertNull($orderController->lineTime(3, 1));
+        $this->assertNull($orderController->lineTime('one', [2, 2, 3, 3]));
         $this->assertNull($orderController->lineTime([2, 2, 3, 3], 'one'));
         $this->assertNull($orderController->lineTime([2, 2, 3, 3], [2]));
     }
