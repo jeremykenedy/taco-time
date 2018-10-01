@@ -3,6 +3,7 @@ Simple example Laravel 5.7 app to calculate taco checkout time using a VueJS 2 f
 
 [![Build Status](https://travis-ci.org/jeremykenedy/taco-time.svg?branch=master)](https://travis-ci.org/jeremykenedy/taco-time)
 [![StyleCI](https://github.styleci.io/repos/149530311/shield?branch=master)](https://github.styleci.io/repos/149530311)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jeremykenedy/taco-time/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jeremykenedy/taco-time/?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 #### Table of contents
